@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Indirect Recursion</title>
+    <script>
+    //   let money = 100;
+    //   let totalApple = 0;
+
+    //   function buyApple(x) {
+    //     if (x > 0) {
+    //       console.warn("I have", x, "RS", totalApple);
+    //       buyMore(x - 10);
+    //     } else {
+    //       console.warn("I don't have more money", totalApple);
+    //     }
+    //   }
+    //   function buyMore(x) {
+    //     totalApple++;
+    //     buyApple(x - 5);
+    //   }
+
+    //   buyApple(money);
+   function test(x)
+   {
+    // console.warn(x)
+    if(x>0){
+        test(x-1)
+    }
+    console.log(x) // output - 0 1 2 3 4 5
+   }
+   
+   let data=5;
+   test(data)  
+//----------------------output explain------------
+//    test(5)
+//   test(4)
+//     test(3)
+//       test(2)
+//         test(1)
+//           test(0)
+//           0 print
+//         1 print
+//       2 print
+//     3 print
+//   4 print
+// 5 print
+//----------------------------------
+   
+    </script>
+  </head>
+  <body>
+    <h1>Indirect Recursion</h1>
+  </body>
+</html>
