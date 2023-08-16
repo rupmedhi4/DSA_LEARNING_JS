@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      let name ="jyoti"
+      name = name.split("");
+      let data=[];
+      let currSize=data.length;
+      
+      function reverseName(name){
+        for(let i =0; i<name.length;i++){
+            push(name[i])
+        }    
+        for(let i =0; i<name.length;i++){
+           name[i]=pop()
+        }    
+      }
+      
+      function push(i){
+       data[currSize]=i
+       currSize++  
+      }
+
+      function pop(){
+        let lastRemoveItem = data[currSize-1]
+        currSize--
+        data.length=currSize
+        return lastRemoveItem
+      }
+
+      reverseName(name)
+      console.log(name)
+    </script>
+  </head>
+  <body></body>
+</html>

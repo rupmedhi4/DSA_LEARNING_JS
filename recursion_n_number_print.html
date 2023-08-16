@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+    <script>
+      let n = 10;
+      let arr =[]
+      function printNumber(n) {
+        if (n === 1) {
+          console.log(n);
+          arr[n-1]=n
+          return
+        }
+        printNumber(n - 1);
+        console.log(n);
+        arr[n-1]=n
+       
+      }
+      console.log(arr);
+      console.log(arr.length);
+      printNumber(n);
+    </script>
+  </head>
+  <body>
+    <h1>print 1 to N number in increasing order</h1>
+  </body>
+</html>
