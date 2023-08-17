@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      class Stack {
+        data = []; 
+        result = [];
+        count;
+
+        constructor(name) {
+          this.data = name.split("");
+          this.count = this.data.length - 1; 
+          this.push();
+        }
+
+        push() {
+          for (let i = 0; i < this.data.length; i++) {
+            this.result[i] = this.data[i];
+          }
+          console.log(this.result);
+          this.pop()
+        }
+
+        pop() {
+          if (this.result.length === 0) {
+            console.log("Stack is empty");
+          } else {
+            for (let i = 0; i <= this.result.length; i++) {
+              this.data[i] = this.result[this.count];
+              this.count--
+            }
+            
+          }
+          console.log(this.data)
+        }
+      }
+
+      const st1 = new Stack("rupjyoti");
+    </script>
+  </head>
+  <body></body>
+</html>
