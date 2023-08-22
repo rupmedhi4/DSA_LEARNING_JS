@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <script>
+    let str = "heeyyyyylo";
+    let obj = {};
+    let max = "";
+    for (let i = 0; i < str.length; i++) {
+      let word = str[i];
+      if (!obj[word]) {
+        obj[word] = 0;
+      }
+      obj[word]++;
+
+      if (max === "" || obj[word] > obj[max]) {
+        max = word;
+        
+      }
+    }
+    console.log(max);
+  </script>
+  <body></body>
+</html>
