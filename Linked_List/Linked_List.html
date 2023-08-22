@@ -48,6 +48,21 @@
           let newNode = lead.next.next
           lead.next=newNode
         }
+
+        InsertNode(index, val){
+            let count =1
+            let currNode = this.head;
+
+            while(count<index-1){
+                currNode=currNode.next
+                count++
+            }
+            let newNode = currNode.next
+            currNode.next={
+                value:val,
+                next : newNode
+            }
+        }
       }
 
       let list = new List(100);
@@ -56,7 +71,8 @@
       list.addNode(400);
       list.addNode(500);
       list.traversing();
-      list.DeleteNode(1);
+    // list.DeleteNode(1);
+      list.InsertNode(3,30000);
       console.log(list);
     </script>
   </head>
