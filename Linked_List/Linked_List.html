@@ -29,7 +29,7 @@
           let count = 0;
           let currNode = this.head;
           while (count < this.size) {
-            console.log(currNode);
+            //console.log(currNode);
             currNode = currNode.next;
             count++;
           }
@@ -41,27 +41,45 @@
           if (index === 0) {
             this.head = lead.next;
           }
-          while (count < index-1) {
+          while (count < index - 1) {
             lead = lead.next;
             count++;
           }
-          let newNode = lead.next.next
-          lead.next=newNode
+          let newNode = lead.next.next;
+          lead.next = newNode;
         }
 
-        InsertNode(index, val){
-            let count =1
-            let currNode = this.head;
+        InsertNode(index, val) {
+          let count = 1;
+          let currNode = this.head;
 
-            while(count<index-1){
-                currNode=currNode.next
-                count++
+          while (count < index - 1) {
+            currNode = currNode.next;
+            count++;
+          }
+          let newNode = currNode.next;
+          currNode.next = {
+            value: val,
+            next: newNode,
+          };
+        }
+
+        seachNode(data){
+            let result
+            let lead = this.head
+            let loop = true
+            
+            while(loop){
+                  if(loop && lead.value === data){
+                    result = lead
+                    loop = false
+                }
+                lead = lead.next
+                loop = lead===null ? false:true
+
+              
             }
-            let newNode = currNode.next
-            currNode.next={
-                value:val,
-                next : newNode
-            }
+            console.log(result)
         }
       }
 
@@ -71,9 +89,10 @@
       list.addNode(400);
       list.addNode(500);
       list.traversing();
-    // list.DeleteNode(1);
-      list.InsertNode(3,30000);
-      console.log(list);
+      // list.DeleteNode(1);
+      list.InsertNode(3, 30000);
+      list.seachNode(100);
+    //  console.log(list);
     </script>
   </head>
   <body></body>
